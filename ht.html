@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Art Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .art-piece {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .art-piece:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .art-piece img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .art-info {
+            padding: 20px;
+        }
+        
+        .art-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+        
+        .art-description {
+            color: #4a5568;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        
+        .back-button {
+            text-align: center;
+            margin-top: 30px;
+            padding-bottom: 40px;
+        }
+        
+        .back-button a {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .back-button a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #718096;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Art Gallery</h1>
+            <p class="subtitle">A collection of my drawings and illustrations</p>
+        </header>
+        
+        <div class="gallery">
+            <!-- Artwork 1 -->
+            <div class="art-piece">
+                <img src="drawings/i1.jpg" alt="Drawing 1">
+                <div class="art-info">
+                    <h3 class="art-title">Drawing Title 1</h3>
+                    <p class="art-description">A brief description of this artwork. What inspired it, the techniques used, or the story behind it.</p>
+                </div>
+            </div>
+            
+            <!-- Artwork 2 -->
+            <div class="art-piece">
+                <img src="drawings/i2.jpg" alt="Drawing 2">
+                <div class="art-info">
+                    <h3 class="art-title">Drawing Title 2</h3>
+                    <p class="art-description">A brief description of this artwork. What inspired it, the techniques used, or the story behind it.</p>
+                </div>
+            </div>
+            
+            <!-- Artwork 3 -->
+            <div class="art-piece">
+                <img src="drawings/i3.jpg" alt="Drawing 3">
+                <div class="art-info">
+                    <h3 class="art-title">Drawing Title 3</h3>
+                    <p class="art-description">A brief description of this artwork. What inspired it, the techniques used, or the story behind it.</p>
+                </div>
+            </div>
+            
+            <!-- Artwork 4 -->
+            <div class="art-piece">
+                <img src="drawings/i4.jpg" alt="Drawing 4">
+                <div class="art-info">
+                    <h3 class="art-title">Drawing Title 4</h3>
+                    <p class="art-description">A brief description of this artwork. What inspired it, the techniques used, or the story behind it.</p>
+                </div>
+            </div>
+            
+            <!-- Artwork 5 -->
+            <div class="art-piece">
+                <img src="drawings/i5.jpg" alt="Drawing 5">
+                <div class="art-info">
+                    <h3 class="art-title">Drawing Title 5</h3>
+                    <p class="art-description">A brief description of this artwork. What inspired it, the techniques used, or the story behind it.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="back-button">
+            <a href="index.html">← Back to Portfolio</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 My Art Gallery. All drawings are original works.</p>
+    </footer>
+</body>
+</html>
